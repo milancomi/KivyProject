@@ -1,0 +1,64 @@
+"C:\Program Files\MongoDB\Server\4.4\bin\mongo.exe"
+
+
+db.createUser({  
+ first_name:"test1",
+ last_names:"test1",
+ user_names:"test1",
+ passwords:"test1",
+ designations:"test1",
+
+ roles:[  
+  {  
+     role:"readWrite",
+     db:"u8"
+  }
+ ],
+ mechanisms:[  
+  "SCRAM-SHA-1"
+ ]
+})
+
+
+
+
+db.createUser({
+ first_name:"test1",
+ last_names:"test1",
+ user_names:"test1",
+ passwords:"test1",
+ designations:"test1",
+})
+
+
+
+
+
+db.stocks.insertOne({
+            "product_code":"123123",
+            "product_name":"123123",
+            "product_weight":"123123",
+            "in_stock":"123123",
+            "sold":"123123",
+            "order":"123123",
+            "last_purchase":"123123"
+}
+)
+
+
+
+db.users.insertOne({
+            "first_name":"aaaaaa",
+            "last_name":"ddssdf",
+            "user_name":"dsfsdfs",
+            "password":"dssdgsdg",
+            "designation":"sdsgsg"}
+)
+
+
+
+            _users['first_names'][idx] = first_names[idx]
+            _users['last_names'][idx] = last_names[idx]
+            _users['user_names'][idx] = user_names[idx]
+            _users['passwords'][idx] = passwords[idx]
+            _users['designations'][idx] = designations[idx]

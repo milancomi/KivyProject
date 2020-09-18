@@ -1,0 +1,41 @@
+<AdminWindow>:
+    id:main_win
+    orientation: 'vertical'
+    canvas.before:
+        Color:
+            rgba:(1,1,1,1)
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    BoxLayout:
+        id:top_nav
+        size_hint_y:None
+        height:30
+        canvas.before:
+            Color:
+                rgba:(.06,.45,.45,1)
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        
+        Button:
+            id: file_trigger
+            text: 'File'
+            on_release: file_dropdown.open(self)
+            size_hint:(.1,None)
+            height:30
+            Widget:
+                on_parent:file_dropdown.dismiss()
+
+                DropDown:
+                    id: file_dropdown
+                    Button:
+                        id: close
+                        text:'quit'
+                        size_hint_y:None
+                        height:30
+        Label:
+            text: 'Admin Dashboard'
+            bold:True
+            size_hint:(.9,None)
+            height:30
